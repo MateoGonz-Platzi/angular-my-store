@@ -12,13 +12,16 @@
     <h2>Uso del decorador @Input</h2>
     <span>Image string value:</span>
     <p>{{imgFromFather}}</p>
+    <b><p color="red">*{{imgStatusPhrase}}</p></b>
   </li>
   <li>
     <h2>Uso del decorador @Input con datos dinamicos desde el input padre</h2>
     <span>Image rendered value:</span><br>
-    <img *ngIf="imgFromFather; else elseImg" width="200px" [src]="imgFromFather" alt="renderd-image-string"/>
-    <ng-template #elseImg>
-      <img width="200px" [src]="imgBase" alt="renderd-image-string"/>
-    </ng-template>
+    <img
+      (load)="imageLoaded()"
+      (error)="imageError()"
+      width="200px"
+      [src]="imgFromFather"
+      alt="renderd-image-string"/>
   </li>
 </ul>

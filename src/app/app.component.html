@@ -3,4 +3,4 @@
 <span>input father</span>
 <p><input #inputFather type="text" [(ngModel)]="imgFromFather" name="imgFromFather"></p>
 <small>{{inputFather.value.length}}/ no limit</small>
-<app-img [imgFromFather]='imgFromFather'></app-img>
+<app-img (imgLoaded)="onLoadedImg($event)" [imgFromFather]='imgFromFather'></app-img>

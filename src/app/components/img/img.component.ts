@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-img',
@@ -8,12 +8,22 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ImgComponent implements OnInit {
 
   @Input() imgFromFather: string = '';
+  @Output() imgLoaded = new EventEmitter<string>();
   img: string = 'imagen_child_component.png';
-  imgBase: string = './assets/img/default.png';
+  imgDefault: string = './assets/img/default.png';
+  imgStatusPhrase: string = '';
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  imageLoaded() {
+    console.log('Image loaded');
+    this.imgLoaded.emit(this.imgFromFather);
+  }
+
+  imageError() {
+    this.imgFromFather = this.imgDefault;
+  }
 }

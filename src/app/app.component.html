@@ -1,1 +1,6 @@
-<app-img></app-img>
+<h2>Input decorator in dynamic input text</h2>
+<p>Send dynamic img parent on father component</p>
+<span>input father</span>
+<p><input #inputFather type="text" [(ngModel)]="imgFromFather" name="imgFromFather"></p>
+<small>{{inputFather.value.length}}/ no limit</small>
+<app-img [imgFromFather]='imgFromFather'></app-img>

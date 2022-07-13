@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  imgFromFather: string = ''; //https://www.w3schools.com/howto/img_avatar.png
+
   title = 'angular-my-store';
 }

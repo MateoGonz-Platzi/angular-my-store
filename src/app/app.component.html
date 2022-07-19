@@ -4,3 +4,10 @@
 <p><input #inputFather type="text" [(ngModel)]="imgFromFather" name="imgFromFather"></p>
 <small>{{inputFather.value.length}}/ no limit</small>
 <app-img (imgLoaded)="onLoadedImg($event)" [imgFromFather]='imgFromFather'></app-img>
+
+<!-- SE AÑADE EL COMPONENTE PRODUCTO -->
+<hr><br>
+<div class="product-component">
+  <app-product [product]="product"  *ngFor="let product of ProductArray"></app-product>
+</div>
+<!-- Fin producto -->

@@ -7,6 +7,7 @@ import { Product } from './models/product.model'
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  public showImg: boolean = true;
   public title = 'angular-my-store';
   public imgFromFather: string = ''; //https://www.w3schools.com/howto/img_avatar.png
   public ProductArray: Product[] = [
@@ -33,5 +34,9 @@ export class AppComponent {
 
   onLoadedImg(img: string) {
     console.log(img);
+  }
+
+  toggleImg() {
+    this.showImg = !this.showImg;
   }
 }

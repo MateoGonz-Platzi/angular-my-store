@@ -1,9 +1,20 @@
 <h2>Input decorator in dynamic input text</h2>
-<p>Send dynamic img parent on father component</p>
-<span>input father</span>
-<p><input #inputFather type="text" [(ngModel)]="imgFromFather" name="imgFromFather"></p>
-<small>{{inputFather.value.length}}/ no limit</small>
-<app-img (imgLoaded)="onLoadedImg($event)" [imgFromFather]='imgFromFather'></app-img>
+<p>Enviando una imagen dinámicamente, desde el componente padre</p>
+
+<span>input padre</span>
+<div class="input-image">
+  <p><input #inputFather type="text" [(ngModel)]="imgFromFather" name="imgFromFather" placeholder="Url de la imagen"></p>
+  <small>{{inputFather.value.length}}/ no limit</small>
+</div>
+
+<div>
+  <p>Botón para detener el contador haciendo toggle, al componente imagen.</p>
+  <button (click)="toggleImg()">Toggle img</button>
+  <p>ShowImg component is: {{showImg}}</p>
+</div>
+
+
+<app-img *ngIf="showImg" (imgLoaded)="onLoadedImg($event)" [imgFromFather]='imgFromFather'></app-img>
 
 <!-- SE AÑADE EL COMPONENTE PRODUCTO -->
 <hr><br>

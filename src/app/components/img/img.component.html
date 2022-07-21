@@ -1,21 +1,23 @@
 <hr>
-<i>img component works!</i>
-<br>
-<h2>Uso del decorador @Input()</h2>
-<hr>
+<!-- Contador -->
+<h3>Contador</h3>
+<p>{{ counter }}</p>
+<!-- Fin Contador -->
+<h1>Componente imagen</h1>
+<h3>Uso del decorador @Input()</h3>
 <ul>
   <li>
-    <h2>Interpolación</h2>
+    <h3>Uso de Interpolación</h3>
     <p>{{img}}</p>
   </li>
   <li>
-    <h2>Uso del decorador @Input</h2>
+    <h3>Uso del decorador @Input</h3>
     <span>Image string value:</span>
     <p>{{imgFromFather}}</p>
     <b><p color="red">*{{imgStatusPhrase}}</p></b>
   </li>
   <li>
-    <h2>Uso del decorador @Input con datos dinamicos desde el input padre</h2>
+    <h3>Uso del decorador @Input con datos dinamicos desde el input padre</h3>
     <span>Image rendered value:</span><br>
     <img
       (load)="imageLoaded()"
@@ -25,3 +27,4 @@
       alt="renderd-image-string"/>
   </li>
 </ul>
+

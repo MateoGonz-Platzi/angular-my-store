@@ -2,3 +2,16 @@
   display: flex;
   justify-content: space-between;
 }
+
+.input-image{
+  width: 30%;
+  border: 1px solid rgb(170, 163, 163);
+  border-radius: 10px;
+  display:flex;
+  align-items: center;
+  justify-content : center;
+  small {
+    margin-left: 5px;
+    color: rgb(87, 87, 87);
+  }
+}

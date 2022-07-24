@@ -1,11 +1,11 @@
 $shadow-element:rgba(0, 0, 0, 0.1) 0px 4px 12px;
-$green-seleceted: rgb(173,216,179	);
+$green-selected: rgb(173,216,179	);
 $green-filter: invert(91%) sepia(4%) saturate(1714%) hue-rotate(75deg) brightness(94%) contrast(84%);
 $gray: rgb(149, 153, 167);
 
 .show-mobile {
   padding: 0px 5px;
-  width: 100%;
+  /* width: 100%; */
   height: 60px;
   display: block;
   display: flex;
@@ -24,7 +24,98 @@ $gray: rgb(149, 153, 167);
     }
   }
 
-  a {
+  .side-menu{
+    box-shadow: $shadow-element;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: white;
+    transform: translateX(-100%);
+    transition: all ease-out .5s;
+
+    &.activeMenu{
+      transform: translateX(0);
+    }
+
+    .mobile-menu-header {
+      box-shadow: $shadow-element;
+      width: 100%;
+      height: 60px;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      img {
+        width: auto;
+      }
+
+      button {
+        position: absolute;
+        right: 5px;
+      }
+    }
+
+    ul {
+      padding: 15px 5px;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+
+      li {
+        text-align: center;
+        border: solid 1px $gray;
+        padding: 10px;
+        margin: 5px;
+        border-radius: 5px;
+        &:hover{
+          box-shadow: $shadow-element;
+          cursor: pointer;
+          a {
+            color:  $green-selected;
+          }
+        }
+        a {
+          color: $gray;
+          font-size: 20px;
+          font-weight: bold;
+          margin: 0 .2em;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .info{
+      background-color: $green-selected;
+      width: 100%;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      position: absolute;
+      bottom: 0;
+
+      .account {
+        margin-right: .5em;
+        a {
+          color: white;
+          text-decoration: none;
+          &:hover {
+            color: $gray;
+          }
+        }
+      }
+    }
+  }
+
+  .button-hover {
     border: none;
     background: none;
     &:hover {
@@ -51,7 +142,7 @@ $gray: rgb(149, 153, 167);
       margin: 0 .2em;
       text-decoration: none;
       &:hover {
-        color: $green-seleceted;
+        color: $green-selected;
       }
     }
   }
@@ -73,7 +164,7 @@ $gray: rgb(149, 153, 167);
           box-shadow: $shadow-element;
           cursor: pointer;
           a {
-            color: $green-seleceted;
+            color: $green-selected;
           }
         }
         a {

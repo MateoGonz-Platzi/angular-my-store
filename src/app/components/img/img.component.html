@@ -1,9 +1,9 @@
-<hr>
+<!-- <hr> -->
 <!-- Contador -->
-<h3>Contador</h3>
-<p>{{ counter }}</p>
+<!-- <h3>Contador</h3>
+<p>{{ counter }}</p> -->
 <!-- Fin Contador -->
-<h1>Componente imagen</h1>
+<!-- <h1>Componente imagen</h1>
 <h3>Uso del decorador @Input()</h3>
 <ul>
   <li>
@@ -26,5 +26,11 @@
       [src]="imgFromFather"
       alt="renderd-image-string"/>
   </li>
-</ul>
+</ul> -->
+
+<img
+  (load)="imageLoaded()"
+  (error)="imageError()"
+  [src]="imgFromFather"
+  alt="renderd-image-string"/>
 

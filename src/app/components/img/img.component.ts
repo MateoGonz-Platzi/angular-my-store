@@ -9,7 +9,7 @@ export class ImgComponent implements OnInit, OnDestroy, OnChanges {
 
   //ngOnChanges
   imgFromFather: string = '';
-  @Input('imgFromFather')
+  @Input('imgSrc')
   set changeImg(newImg: string) {
     this.imgFromFather = newImg;
     console.log('Solo la imagen cambió', this.imgFromFather);

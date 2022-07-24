@@ -1,6 +1,12 @@
 <div class="product--card">
-  <span>{{product.name}}</span>
-  <p>Product id: {{product.id}}</p>
+  <span class="product--title">{{product.name}}</span>
+  <p class="product--id">Product id: {{product.id}}</p>
   <app-img [imgSrc]="product.image"></app-img>
-  <p>Price: {{product.price}}</p>
+  <p class="product--price">Price: ${{product.price}}</p>
+
+  <button class="button-shoppingcart"
+    (click)="onAddShoppingCart()">
+      <img src="./assets/svg/icon_shopping_cart.svg" alt="logo">
+      <p>Add to cart</p>
+  </button>
 </div>

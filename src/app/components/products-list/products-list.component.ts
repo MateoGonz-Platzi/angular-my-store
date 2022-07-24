@@ -9,6 +9,10 @@ import { Product } from 'src/app/models/product.model';
 })
 export class ProductsListComponent implements OnInit {
 
+  public total: number = 0;
+
+  public UserProducts: Product[] = [];
+
   public ProductArray: Product[] = [
     {
       id: '1',
@@ -33,6 +37,13 @@ export class ProductsListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onAddtoShoppingCart(product: Product) {
+    this.UserProducts.push(product);
+    /* this.total += product.price; */
+    this.total = this.UserProducts
+    .reduce((sum, item) => sum + item.price, 0);
   }
 
 }

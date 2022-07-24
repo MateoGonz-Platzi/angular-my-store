@@ -1,7 +1,14 @@
+<h1>Productos del carrito</h1>
+<p>Productos en carrito: {{UserProducts.length}}</p>
+<p>Total a pagar: {{total}}</p>
+<br>
+
+
 <h1>Catálogo de productos</h1>
 <div class="products--grid">
   <app-product
     [product]="product"
-    *ngFor="let product of ProductArray
-  "></app-product>
+    *ngFor="let product of ProductArray"
+    (addedProduct)="onAddtoShoppingCart($event)"
+    ></app-product>
 </div>

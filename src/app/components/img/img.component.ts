@@ -34,11 +34,11 @@ export class ImgComponent implements OnInit, OnDestroy, OnChanges {
 
   ngOnInit(): void {
     // Intervalo por cada segundo usando el contador
-    this.counterFn = window.setInterval(() => {
+    /* this.counterFn = window.setInterval(() => {
       // Esto puede simular un reloj en linea.
       this.counter += 1;
       console.log('Counter is runing')
-    }, 1000);
+    }, 1000); */
   }
 
   //ngDestroy function

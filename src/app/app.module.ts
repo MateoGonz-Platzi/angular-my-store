@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ImgComponent } from './components/img/img.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProductComponent } from './components/product/product.component';
 import { ProductsListComponent } from './components/products-list/products-list.component';
 
@@ -13,7 +14,8 @@ import { ProductsListComponent } from './components/products-list/products-list.
     AppComponent,
     ImgComponent,
     ProductComponent,
-    ProductsListComponent
+    ProductsListComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

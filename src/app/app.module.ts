@@ -10,6 +10,9 @@ import { ImgComponent } from './components/img/img.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProductComponent } from './components/product/product.component';
 import { ProductsListComponent } from './components/products-list/products-list.component';
+import { StringReversePipe } from './pipes/stringReverse.pipe';
+import { TimeAgoPipe } from './pipes/time-ago.pipe';
+import { NumberVowelsPipe } from './pipes/number-vowels.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { ProductsListComponent } from './components/products-list/products-list.
     ImgComponent,
     ProductComponent,
     ProductsListComponent,
-    NavbarComponent
+    NavbarComponent,
+    StringReversePipe,
+    TimeAgoPipe,
+    NumberVowelsPipe
   ],
   imports: [
     HttpClientModule,

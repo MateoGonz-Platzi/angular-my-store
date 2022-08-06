@@ -12,6 +12,8 @@ import { StoreServiceService } from 'src/app/services/storeService.service';
 })
 export class ProductsListComponent implements OnInit {
 
+  public today: Date = new Date();
+
   public total: number = 0;
 
   public userProducts: Product[] = [];

@@ -12,19 +12,19 @@ export class StoreServiceService {
   private productArray: Product[] = [
     {
       id: '1',
-      name: 'Automobil de juguete',
+      title: 'Automobil de juguete',
       price: 100,
       image: '../assets/img/image1.jpeg'
     },
     {
       id: '2',
-      name: 'Muñeca de trapo',
+      title: 'Muñeca de trapo',
       price: 180,
       image: '../assets/img/image2.jpeg'
     },
     {
       id: '3',
-      name: 'Pelota de futbol',
+      title: 'Pelota de futbol',
       price: 120,
       image: '../assets/img/image3.jpeg'
     }

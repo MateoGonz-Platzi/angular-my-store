@@ -13,6 +13,7 @@ import { ProductsListComponent } from './components/products-list/products-list.
 import { StringReversePipe } from './pipes/stringReverse.pipe';
 import { TimeAgoPipe } from './pipes/time-ago.pipe';
 import { NumberVowelsPipe } from './pipes/number-vowels.pipe';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { NumberVowelsPipe } from './pipes/number-vowels.pipe';
     NavbarComponent,
     StringReversePipe,
     TimeAgoPipe,
-    NumberVowelsPipe
+    NumberVowelsPipe,
+    HighlightDirective
   ],
   imports: [
     HttpClientModule,

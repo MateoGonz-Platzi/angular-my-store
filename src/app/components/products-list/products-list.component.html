@@ -8,6 +8,7 @@
 <h1>Catálogo de productos</h1>
 <div class="products--grid">
   <app-product
+    appHighlight
     [product]="product"
     *ngFor="let product of productArray"
     (addedProduct)="onAddtoShoppingCart($event)"

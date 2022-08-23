@@ -1,7 +1,7 @@
 <div class="product--card">
   <span class="product--title">{{ product.title }}</span>
   <p class="product--id">Product id: {{product.id}}</p>
-  <app-img [imgSrc]="product.image"></app-img>
+  <app-img [changeImg]="product.image"></app-img>
   <p class="product--price">Price: {{product.price | currency:'USD'}}</p>
 
   <button class="button-shoppingcart"

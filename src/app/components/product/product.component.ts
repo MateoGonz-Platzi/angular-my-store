@@ -23,6 +23,7 @@ export class ProductComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log('Product component')
   }
 
   onAddShoppingCart() {

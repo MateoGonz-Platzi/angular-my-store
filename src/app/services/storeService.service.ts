@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 import { Product } from 'src/app/models/product.model';
 
@@ -7,7 +8,9 @@ import { Product } from 'src/app/models/product.model';
 })
 export class StoreServiceService {
 
-  private cartProducts: Product[] = [];
+  private cartProductsArray: Product[] = [];
+  private cartProduct = new BehaviorSubject<Product[]>([]);
+  public cartProduct$ = this.cartProduct.asObservable();
 
   private productArray: Product[] = [
     {
@@ -34,7 +37,7 @@ export class StoreServiceService {
 
   getTotal() {
     /* this.total += product.price; */
-    return this.cartProducts
+    return this.cartProductsArray
     .reduce((sum, item) => sum + item.price, 0);
   }
 
@@ -43,11 +46,13 @@ export class StoreServiceService {
   }
 
   getCartProducts() {
-    return this.cartProducts;
+    return this.cartProductsArray;
   }
 
   onAddtoShoppingCart(product: Product) {
-    this.cartProducts.push(product);
+    this.cartProductsArray.push(product);
+    //💡 El observable emitirá un nuevo valor con cada producto que se agregue al carrito.
+    this.cartProduct.next(this.cartProductsArray);
   }
 
 }
